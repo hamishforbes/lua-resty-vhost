@@ -1,11 +1,11 @@
 #lua-resty-vhost
 
 Library for matching hostnames to values.
-Supports wildcard and .hostname syntax in the same way as Nginx's [server_name](http://nginx.org/en/docs/http/ngx_http_core_module.html#server_name) directive.
+Supports wildcard and `.hostname.tld` syntax in the same way as Nginx's [server_name](http://nginx.org/en/docs/http/ngx_http_core_module.html#server_name) directive.
 
 Keys beginning with `.` or `*.` will match apex and all sub-domains, longest match wins. Non-wildcard matches always win.
 
-Regex matches are not supported
+Regex matches and prefix wildcards are not supported.
 
 #Overview
 
@@ -80,4 +80,5 @@ Returns nil and an error message on failure
 
 ##TODO
  * Regex matches
+ * Prefix matches
  * Trie compression
